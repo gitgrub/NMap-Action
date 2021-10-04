@@ -4,7 +4,7 @@ LABEL "com.github.actions.name"="NMap"
 LABEL "com.github.actions.description"="NMaps Host And Uploads Findings To Issue"
 LABEL "com.github.actions.icon"="cloud-lightning"
 LABEL "com.github.actions.color"="Red"
-LABEL "maintainer"="JGamblin <Jerry.Gamblin@Gmail.com>"
+LABEL "maintainer"="test"
 
 RUN apt-get update && apt-get install -y \
   curl \
