@@ -21,5 +21,8 @@ RUN apt-get update && apt-get install -y \
 
 #ADD entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/entrypoint.sh"]
+
+RUN ls -la
+
 ADD entrypoint.sh /NMap/entrypoint.sh
 ENTRYPOINT ["/NMap/entrypoint.sh"]
