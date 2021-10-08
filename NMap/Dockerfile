@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
 #ENTRYPOINT ["/entrypoint.sh"]
 
 #RUN nmap -v -A www.google.com
-RUN nmap -v -p www.yahoo.com
+RUN nmap -v www.yahoo.com
 #-p -A
 #RUN find / -name entrypoint.sh
 
