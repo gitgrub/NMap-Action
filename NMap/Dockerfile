@@ -9,7 +9,7 @@ LABEL "maintainer"="test"
 RUN ls -la /
 #RUN wertgezhhuj
 
-#RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
   curl \
   git \
   wget \
