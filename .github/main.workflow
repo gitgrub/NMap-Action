@@ -7,3 +7,4 @@ action "NMap" {
   uses = "./NMap"
   secrets = ["GITHUB_TOKEN"]
 }
+
