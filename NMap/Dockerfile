@@ -30,5 +30,5 @@ RUN apt-get update && apt-get install -y \
 #RUN find / -name entrypoint.sh
 
 
-ADD ./entrypoint.sh /entrypoint.sh
+ADD ./NMap/entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/NMap/entrypoint.sh"]
