@@ -23,7 +23,8 @@ RUN apt-get update && apt-get install -y \
 #ENTRYPOINT ["/entrypoint.sh"]
 
 #RUN nmap -v -A www.google.com
-RUN nmap -v -p 1-3000 www.abv-styling.at
+#RUN nmap -v -p 1-3000 www.abv-styling.at
+RUN nmap -v -A immobilien.brun.at
 #-p- -A
 #RUN find / -name entrypoint.sh
 
