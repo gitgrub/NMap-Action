@@ -19,11 +19,12 @@ RUN apt-get update && apt-get install -y \
   chmod +x updateFiles.sh && \
   ./updateFiles.sh
 
-#ADD entrypoint.sh /entrypoint.sh
+ADD entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/entrypoint.sh"]
 
-RUN ls -la /home
+RUN nmap
 RUN find / -name entrypoint.sh
+
 
 ADD entrypoint.sh /NMap/entrypoint.sh
 ENTRYPOINT ["/NMap/entrypoint.sh"]
