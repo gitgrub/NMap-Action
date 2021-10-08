@@ -4,7 +4,7 @@ LABEL "com.github.actions.name"="NMap"
 LABEL "com.github.actions.description"="NMaps Host And Uploads Findings To Issue"
 LABEL "com.github.actions.icon"="cloud-lightning"
 LABEL "com.github.actions.color"="Red"
-LABEL "maintainer"="test"
+LABEL "maintainer"="gitgrub <gitgrub.email@gmail.com>"
 
 RUN ls -la /
 #RUN wertgezhhuj
@@ -33,4 +33,5 @@ RUN apt-get update && apt-get install -y \
 ADD ./NMap/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
+ADD ./scan.txt /scan.txt
 RUN /entrypoint.sh
