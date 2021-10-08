@@ -9,4 +9,5 @@ body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
-curl -i -H "Authorization: token ${{ GITHUB_TOKEN }}" -d "$data" $issues_url
+#curl -i -H "Authorization: token $GITHUB_TOKEN" -d "$data" $issues_url
+curl -i -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -d "$data" $issues_url
