@@ -9,7 +9,7 @@ LABEL "maintainer"="test"
 RUN ls -la /
 #RUN wertgezhhuj
 
-RUN apt-get update && apt-get install -y \
+#RUN apt-get update && apt-get install -y \
   curl \
   git \
   wget \
@@ -25,13 +25,10 @@ RUN apt-get update && apt-get install -y \
 #ADD entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/entrypoint.sh"]
 
-#RUN nmap -v -A www.google.com
 #RUN nmap -v -p 1-3000 www.abv-styling.at
-#RUN nmap -v immobilien.brun.at
-#RUN nmap -v -A scanme.nmap.org
-#-p- -A
+#-p- -A -p 1-3000
 #RUN find / -name entrypoint.sh
 
 
-ADD /entrypoint.sh entrypoint.sh
+ADD ./entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/NMap/entrypoint.sh"]
