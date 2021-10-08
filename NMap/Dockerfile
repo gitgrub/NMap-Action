@@ -25,10 +25,10 @@ RUN apt-get update && apt-get install -y \
 #RUN nmap -v -A www.google.com
 #RUN nmap -v -p 1-3000 www.abv-styling.at
 #RUN nmap -v immobilien.brun.at
-RUN nmap -v -A scanme.nmap.org
+#RUN nmap -v -A scanme.nmap.org
 #-p- -A
 #RUN find / -name entrypoint.sh
 
 
-#ADD entrypoint.sh /NMap/entrypoint.sh
+ADD entrypoint.sh NMap/entrypoint.sh
 #ENTRYPOINT ["/NMap/entrypoint.sh"]
