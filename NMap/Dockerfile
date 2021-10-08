@@ -7,7 +7,7 @@ LABEL "com.github.actions.color"="Red"
 LABEL "maintainer"="test"
 
 RUN ls -la /
-RUN wertgezhhuj
+#RUN wertgezhhuj
 
 RUN apt-get update && apt-get install -y \
   curl \
@@ -33,5 +33,5 @@ RUN apt-get update && apt-get install -y \
 #RUN find / -name entrypoint.sh
 
 
-ADD entrypoint.sh NMap/entrypoint.sh
+ADD /entrypoint.sh entrypoint.sh
 #ENTRYPOINT ["/NMap/entrypoint.sh"]
