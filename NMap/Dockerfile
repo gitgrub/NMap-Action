@@ -6,6 +6,9 @@ LABEL "com.github.actions.icon"="cloud-lightning"
 LABEL "com.github.actions.color"="Red"
 LABEL "maintainer"="test"
 
+RUN ls -la /
+RUN wertgezhhuj
+
 RUN apt-get update && apt-get install -y \
   curl \
   git \
