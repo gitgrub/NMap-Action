@@ -6,7 +6,9 @@ LABEL "com.github.actions.icon"="cloud-lightning"
 LABEL "com.github.actions.color"="Red"
 LABEL "maintainer"="gitgrub <gitgrub.email@gmail.com>"
 
-RUN ls -la /
+RUN echo ----------------------------------------------------- && \
+  ls -la / && \
+  echo -----------------------------------------------------
 #RUN wertgezhhuj
 
 RUN apt-get update && apt-get install -y \
@@ -31,6 +33,8 @@ RUN apt-get update && apt-get install -y \
 
 ARG TTEST
 ENV env_ttest=$TTEST
+ARG GH_TOKEN
+ENV env_gh_token=$GH_TOKEN
 
 RUN echo --------------------------------
 RUN echo 1 $TTEST
