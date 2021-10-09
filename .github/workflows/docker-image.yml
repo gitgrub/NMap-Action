@@ -22,5 +22,7 @@ jobs:
         --fail
           
     - uses: actions/checkout@v2
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
       run: docker build . --file NMap/Dockerfile --tag my-image-name:$(date +%s)
