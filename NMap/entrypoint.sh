@@ -15,4 +15,16 @@ echo $TTEST
 echo -----------------
 
 #curl -i -H "Authorization: token $GITHUB_TOKEN" -d "$data" $issues_url
-curl -i -H "Authorization: token $GH_TOKEN" -d "$data" $issues_url
+#curl -i -H "Authorization: token $GH_TOKEN" -d "$data" $issues_url
+
+curl -X "POST" $issues_url \
+     -H "Cookie: logged_in=no" \
+     -H "Authorization: token $GH_TOKEN" \
+     -H "Accept: application/vnd.github.v3+json" \
+#     -H "Content-Type: text/plain; charset=utf-8" \
+     -d $'{
+  "title": "A workflow alerts Operator who performs a process",
+  "body": "TBD",
+  "labels": [
+  ]
+}'
