@@ -29,9 +29,13 @@ RUN apt-get update && apt-get install -y \
 #-p- -A -p 1-3000
 #RUN find / -name entrypoint.sh
 
+RUN echo --------------------------------
+RUN echo $TTEST
+RUN echo $GH_TOKEN
+RUN echo --------------------------------
 
 ADD ./NMap/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 ADD ./scan.txt /scan.txt
-RUN /entrypoint.sh
+RUN /entrypoint.sh $TTEST
