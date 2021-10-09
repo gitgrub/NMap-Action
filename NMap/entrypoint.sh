@@ -11,6 +11,7 @@ data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
 echo -----------------
 echo $GH_TOKEN
+echo $TTEST
 echo -----------------
 
 #curl -i -H "Authorization: token $GITHUB_TOKEN" -d "$data" $issues_url
