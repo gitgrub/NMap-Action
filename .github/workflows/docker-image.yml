@@ -23,5 +23,5 @@ jobs:
           
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file NMap/Dockerfile --tag my-image-name:$(date +%s) --build-arg TTEST=franzi --build-arg GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+      run: docker build --build-arg TTEST=franzi --build-arg GH_TOKEN=${{ secrets.GITHUB_TOKEN }} . --file NMap/Dockerfile --tag my-image-name:$(date +%s)
         
