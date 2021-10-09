@@ -28,3 +28,5 @@ jobs:
       run: docker build . --file NMap/Dockerfile --tag my-image-name:$(date +%s)
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TTEST: franz
+        
