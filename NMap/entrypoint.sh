@@ -17,7 +17,7 @@ echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 body="servus\nkarli"
 #body=$(cat outputfile.txt)
 #-----------------------------------
-body=" \
+body="<pre> \
 # Nmap 7.60 scan initiated Sun Oct 10 21:41:40 2021 as: nmap --oN outputfile.txt www.nivea.de \n \
 Nmap scan report for www.nivea.de (151.101.194.221) \n \
 Host is up (0.0054s latency). \n \
@@ -27,7 +27,7 @@ PORT    STATE SERVICE \n \
 80/tcp  open  http \n \
 443/tcp open  https \n \
 # Nmap done at Sun Oct 10 21:41:57 2021 -- 1 IP address (1 host up) scanned in 17.53 seconds \n \
-"
+</pre>"
 #-----------------------------------
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
