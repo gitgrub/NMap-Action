@@ -17,6 +17,10 @@ echo -----------------
 #curl -i -H "Authorization: token $GITHUB_TOKEN" -d "$data" $issues_url
 #curl -i -H "Authorization: token $GH_TOKEN" -d "$data" $issues_url
 
+echo =========================================================================
+cat outputfile.txt
+echo =========================================================================
+
 curl -X "POST" \
      -H "Authorization: token $GH_TOKEN" \
      -H "Accept: application/vnd.github.v3+json" \
