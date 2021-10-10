@@ -13,7 +13,7 @@ nmap www.nivea.de --oN outputfile.txt
 
 title="NMAP Scan on $(TZ=GST-1GDT date "+%D %T")"
 body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
-body="servus"
+body="servus\nkarli"
 #body=$(cat outputfile.txt)
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
