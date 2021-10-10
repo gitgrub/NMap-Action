@@ -25,5 +25,5 @@ curl -X "POST" \
      -H "Authorization: token $GH_TOKEN" \
      -H "Accept: application/vnd.github.v3+json" \
      $issues_url \
-     -d '{"title":"$title","body":"huhu willi"}'
+     -d '{"title":\"$title\","body":"huhu willi"}'
      
