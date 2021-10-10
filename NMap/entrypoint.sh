@@ -15,7 +15,9 @@ echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo $body
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 body="servus\nkarli"
-#body=$(cat outputfile.txt)
+bod=$(cat outputfile.txt)
+p1="<pre>"
+p2="</pre>"
 #-----------------------------------
 body="<pre> \
 # Nmap 7.60 scan initiated Sun Oct 10 21:41:40 2021 as: nmap --oN outputfile.txt www.nivea.de \n \
@@ -29,6 +31,8 @@ PORT    STATE SERVICE \n \
 # Nmap done at Sun Oct 10 21:41:57 2021 -- 1 IP address (1 host up) scanned in 17.53 seconds \n \
 </pre>"
 #-----------------------------------
+
+body=$p1$bod$p2
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
