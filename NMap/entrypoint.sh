@@ -14,8 +14,8 @@ body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo $body
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-body="servus\nkarli"
 bod=$(cat outputfile.txt)
+bod="servus\nkarli"
 p1="<pre>"
 p2="</pre>"
 #-----------------------------------
