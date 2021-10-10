@@ -11,7 +11,7 @@ nmap www.nivea.de --oN outputfile.txt
 # -iL     Scan targets from a file
 # -A
 
-title="NMAP Scan on $(TZ=:Europe/Berlin date "+%D %T")"
+title="NMAP Scan on $(TZ=Europe/Berlin date "+%D %T")"
 body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
 body="servus"
 #body=$(cat outputfile.txt)
