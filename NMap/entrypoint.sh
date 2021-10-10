@@ -14,7 +14,7 @@ nmap www.nivea.de --oN outputfile.txt
 title="NMAP Scan on $(date "+%D %T")"
 body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
 body="servus"
-body=$(cat outputfile.txt)
+#body=$(cat outputfile.txt)
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
@@ -26,7 +26,9 @@ data="{\"title\":\"$title\",\"body\":\"$body\"}"
 #curl -i -H "Authorization: token $GITHUB_TOKEN" -d "$data" $issues_url
 
 echo =cat========================================================================
+echo =cat========================================================================
 cat outputfile.txt
+echo =cat========================================================================
 echo =cat========================================================================
 
 curl -X "POST" \
@@ -34,6 +36,3 @@ curl -X "POST" \
      -H "Accept: application/vnd.github.v3+json" \
      $issues_url \
      -d "$data"
-     
-#     -d '{"title":$title,"body":"huhu willi"}'
-#     -H "Content-Type: text/plain; charset=utf-8" \
