@@ -9,7 +9,6 @@ LABEL "maintainer"="gitgrub <gitgrub.email@gmail.com>"
 RUN echo ----------------------------------------------------- && \
   ls -la / && \
   echo -----------------------------------------------------
-#RUN wertgezhhuj
 
 RUN apt-get update && apt-get install -y \
   curl \
