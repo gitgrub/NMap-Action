@@ -3,7 +3,7 @@ issues_url="https://api.github.com/repos/gitgrub/NMap-Action/issues"
 
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL scan.txt --oN outputfile.txt
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
-nmap www.nivea.de --oN outputfile.txt
+nmap -A www.nivea.de --oN outputfile.txt
 
 
 # --oN    output normal
