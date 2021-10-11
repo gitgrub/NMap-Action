@@ -36,7 +36,8 @@ body1=$p1$bod$p2
 echo o body1 oooooooooooooooooooooooooooooooooooooooooooo
 echo $body1
 echo ooooooooooooooooooooooooooooooooooooooooooooo
-#body=$p1$body$p2
+
+body=$bod
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
