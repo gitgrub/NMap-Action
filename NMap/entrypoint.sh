@@ -15,7 +15,7 @@ echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo $body
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 bod=$(cat outputfile.txt)
-bod="servus\nkarli"
+#bod="servus\nkarli"
 p1="<pre>"
 p2="</pre>"
 #-----------------------------------
@@ -33,7 +33,7 @@ PORT    STATE SERVICE \n \
 #-----------------------------------
 
 body=$p1$bod$p2
-body=$p1$body$p2
+#body=$p1$body$p2
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
