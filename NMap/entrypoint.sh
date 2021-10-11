@@ -11,7 +11,7 @@ nmap www.nivea.de --oN outputfile.txt
 
 title="NMAP Scan on $(TZ=GST-1GDT date "+%D %T")"
 body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
-echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+echo x sed body xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo $body
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 bod=$(cat outputfile.txt)
@@ -32,12 +32,15 @@ PORT    STATE SERVICE \n \
 </pre>"
 #-----------------------------------
 
-body=$p1$bod$p2
+body1=$p1$bod$p2
+echo o body1 oooooooooooooooooooooooooooooooooooooooooooo
+echo $body1
+echo ooooooooooooooooooooooooooooooooooooooooooooo
 #body=$p1$body$p2
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
-echo =cat========================================================================
+echo =cat outputfile.txt ========================================================
 echo =cat========================================================================
 cat outputfile.txt
 echo =cat========================================================================
