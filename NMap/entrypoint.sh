@@ -40,6 +40,10 @@ echo ooooooooooooooooooooooooooooooooooooooooooooo
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
+echo - data ---------------------------------------------------------
+echo $data
+echo - data ---------------------------------------------------------
+
 echo =cat outputfile.txt ========================================================
 echo =cat========================================================================
 cat outputfile.txt
