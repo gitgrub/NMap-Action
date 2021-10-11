@@ -33,6 +33,7 @@ PORT    STATE SERVICE \n \
 #-----------------------------------
 
 body=$p1$bod$p2
+body=$p1$body$p2
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
