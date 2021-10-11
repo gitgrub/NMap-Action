@@ -8,6 +8,9 @@ nmap www.nivea.de --oN outputfile.txt
 # --open  Only show open (or possibly open) ports
 # -iL     Scan targets from a file
 # -A
+echo =cat outputfile.txt ========================================================
+cat outputfile.txt
+echo =cat========================================================================
 
 title="NMAP Scan on $(TZ=GST-1GDT date "+%D %T")"
 body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
@@ -15,6 +18,9 @@ echo x sed body xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo $body
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 bod=$(cat outputfile.txt)
+echo i bod iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+echo $bod
+echo iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 #bod="servus\nkarli"
 p1="<pre>"
 p2="</pre>"
@@ -44,12 +50,6 @@ data="{\"title\":\"$title\",\"body\":\"$body\"}"
 echo - data ---------------------------------------------------------
 echo $data
 echo - data ---------------------------------------------------------
-
-echo =cat outputfile.txt ========================================================
-echo =cat========================================================================
-cat outputfile.txt
-echo =cat========================================================================
-echo =cat========================================================================
 
 curl -X "POST" \
      -H "Authorization: token $GH_TOKEN" \
