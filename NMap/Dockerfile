@@ -35,15 +35,11 @@ ENV env_ttest=$TTEST
 ARG GH_TOKEN
 ENV env_gh_token=$GH_TOKEN
 
-RUN echo -------------------------------- && \
-  echo 1 $TTEST && \
-  echo 2 $GH_TOKEN && \
-  echo 3 $env_ttest && \
-  echo 4 $env_gh_token && \
-  echo --------------------------------
+# ADD hier
+# ENV für die shell
 
 ADD ./NMap/entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
 
 ADD ./scan.txt /scan.txt
 RUN /entrypoint.sh
