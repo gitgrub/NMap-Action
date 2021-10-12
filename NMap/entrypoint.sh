@@ -48,7 +48,7 @@ body=$bod
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
 
-data="{"title":"NMAP Scan on 10/11/21 12:10:33","body":"# Nmap 7.60 scan initiated Mon Oct 11 10:10:22 2021 as: nmap --oN outputfile.txt www.nivea.de Nmap scan report for www.nivea.de (151.101.130.221) Host is up (0.0053s latency). Other addresses for www.nivea.de (not scanned): 151.101.194.221 151.101.66.221 151.101.2.221 Not shown: 998 filtered ports PORT STATE SERVICE 80/tcp open http 443/tcp open https # Nmap done at Mon Oct 11 10:10:33 2021 -- 1 IP address (1 host up) scanned in 11.51 seconds"}"
+data="{"title":"NMAP Scan on 10/11/21 12:10:33","body":"* Nmap 7.60 scan initiated Mon Oct 11 10:10:22 2021 as: nmap --oN outputfile.txt www.nivea.de Nmap scan report for www.nivea.de (151.101.130.221) Host is up (0.0053s latency). Other addresses for www.nivea.de (not scanned): 151.101.194.221 151.101.66.221 151.101.2.221 Not shown: 998 filtered ports PORT STATE SERVICE 80/tcp open http 443/tcp open https * Nmap done at Mon Oct 11 10:10:33 2021 -- 1 IP address (1 host up) scanned in 11.51 seconds"}"
 
 
 echo - data ---------------------------------------------------------
