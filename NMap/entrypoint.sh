@@ -2,7 +2,7 @@
 issues_url="https://api.github.com/repos/gitgrub/NMap-Action/issues"
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL scan.txt --oN outputfile.txt
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
-nmap www.nivea.de --oN outputfile.txt
+nmap www.nivea.de -A --oN outputfile.txt
 # --oN    output normal
 # -sV     Attempts to determine the version of the service running on port
 # --open  Only show open (or possibly open) ports
