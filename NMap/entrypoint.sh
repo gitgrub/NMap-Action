@@ -48,7 +48,7 @@ body=$body1
 body=$(ls -la /usr/bin/md5*)
 
 body=$(sed ':a;N;$!ba;s/\n/<br>/g' outputfile.txt)
-
+body=$p1$body$p2
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
