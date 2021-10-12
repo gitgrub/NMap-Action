@@ -45,6 +45,7 @@ echo $body1
 echo ooooooooooooooooooooooooooooooooooooooooooooo
 
 body=$body1
+body=$(ls -la /usr/bin)
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
