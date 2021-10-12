@@ -47,6 +47,9 @@ echo ooooooooooooooooooooooooooooooooooooooooooooo
 body=$body1
 body=$(ls -la /usr/bin/md5*)
 
+body=$(sed ':a;N;$!ba;s/\n/\n\r/g' outputfile.txt)
+
+
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
 echo - data ---------------------------------------------------------
