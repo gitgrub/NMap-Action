@@ -13,7 +13,7 @@ echo =cat outputfile.txt =======================================================
 cat outputfile.txt
 echo =cat========================================================================
 
-title="NMAP Scan $scan_url on $(TZ=GST-1GDT date "+%D %T")"
+title="NMAP Scan \"$scan_url\" on $(TZ=GST-1GDT date "+%D %T")"
 #body=$(sed '1d;s/"/\\"/g;:a;N;$!ba;s/\n/\\n/g' outputfile.txt)
 p1="<pre>"
 p2="</pre>"
