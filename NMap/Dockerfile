@@ -23,13 +23,6 @@ RUN apt-get update && apt-get install -y \
   chmod +x updateFiles.sh && \
   ./updateFiles.sh
 
-#ADD entrypoint.sh /entrypoint.sh
-#ENTRYPOINT ["/entrypoint.sh"]
-
-#RUN nmap -v -p 1-3000 www.abv-styling.at
-#-p- -A -p 1-3000
-#RUN find / -name entrypoint.sh
-
 ARG TTEST
 ENV env_ttest=$TTEST
 ARG GH_TOKEN
@@ -39,7 +32,5 @@ ENV env_gh_token=$GH_TOKEN
 # ENV für die shell
 
 ADD ./NMap/entrypoint.sh /entrypoint.sh
-#ENTRYPOINT ["/entrypoint.sh"]
-
 ADD ./scan.txt /scan.txt
 RUN /entrypoint.sh
