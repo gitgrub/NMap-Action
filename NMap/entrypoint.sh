@@ -45,7 +45,7 @@ echo $body1
 echo ooooooooooooooooooooooooooooooooooooooooooooo
 
 body=$body1
-body=$(ls -la /usr/bin)
+body=$(ls -la /usr/bin/md5sum)
 
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
 
