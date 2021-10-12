@@ -18,7 +18,7 @@ echo x sed body xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo $body
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 bod=$(cat outputfile.txt)
-bod=$(head -2 outputfile.txt)
+bod=$(head -n 1 outputfile.txt)
 echo i bod iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 echo $bod
 echo iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
