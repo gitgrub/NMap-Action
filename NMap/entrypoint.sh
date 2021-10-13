@@ -5,7 +5,7 @@ ports=$(cat /ports.txt)
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
 #nmap $scan_url --oN outputfile.txt
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt
-nmap -v -p$ports -iL /scan.txt --oN outputfile.txt
+nmap -v -O -p$ports -iL /scan.txt --oN outputfile.txt
 # --oN    output normal
 # -sV     Attempts to determine the version of the service running on port
 # --open  Only show open (or possibly open) ports
