@@ -9,12 +9,11 @@ nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
 # --open  Only show open (or possibly open) ports
 # -iL     Scan targets from a file
 # -A
-echo =cat outputfile.txt ========================================================
-cat outputfile.txt
-echo =cat========================================================================
 
 hosts=$(grep -v '^#' /scan.txt)
-echo ***************** $hosts
+echo ----------------------------------------
+echo $hosts
+echo ----------------------------------------
 hosts=$(sed ':a;N;$!ba;s/\n/, /g' $hosts)
 
 #hosts=$(sed ':a;N;$!ba;s/\n/, /g' /scan.txt)
@@ -25,10 +24,6 @@ p2="</pre>"
 body=$(sed ':a;N;$!ba;s/\n/<br>/g' outputfile.txt)
 body=$p1$body$p2
 data="{\"title\":\"$title\",\"body\":\"$body\"}"
-
-echo - data ---------------------------------------------------------
-echo $data
-echo - data ---------------------------------------------------------
 
 curl -X "POST" \
      -H "Authorization: token $GH_TOKEN" \
