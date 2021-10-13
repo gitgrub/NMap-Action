@@ -14,7 +14,7 @@ hosts=$(grep -v '^#' /scan.txt)
 echo ----------------------------------------
 echo $hosts
 echo ----------------------------------------
-hosts=$(echo $hosts | sed 's/f/X/g')
+hosts=$(echo $hosts | sed 's/ /, /g')
 
 #hosts=$(sed ':a;N;$!ba;s/\n/, /g' /scan.txt)
 title="NMAP Scan *$hosts* on $(TZ=GST-1GDT date "+%d.%m.%Y %H:%M:%S")"
