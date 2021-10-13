@@ -1,6 +1,7 @@
 #!/bin/sh
 issues_url="https://api.github.com/repos/gitgrub/NMap-Action/issues"
 ports=$(cat /ports.txt)
+ports=$(grep -v '^#' /ports.txt)
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt
 nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
