@@ -1,6 +1,6 @@
 #!/bin/sh
 issues_url="https://api.github.com/repos/gitgrub/NMap-Action/issues"
-scan_url="www.nivea.de"
+scan_url="84.115.234.41"
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL scan.txt --oN outputfile.txt
 #nmap  --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
 nmap $scan_url --oN outputfile.txt
