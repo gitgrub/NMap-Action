@@ -14,6 +14,7 @@ cat outputfile.txt
 echo =cat========================================================================
 
 hosts=$(grep -v '^#' /scan.txt)
+echo ***************** $hosts
 hosts=$(sed ':a;N;$!ba;s/\n/, /g' $hosts)
 
 #hosts=$(sed ':a;N;$!ba;s/\n/, /g' /scan.txt)
