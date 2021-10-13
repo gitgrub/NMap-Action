@@ -14,7 +14,7 @@ cat outputfile.txt
 echo =cat========================================================================
 
 hosts=$(sed ':a;N;$!ba;s/\n/, /g' /scan.txt)
-title="NMAP Scan *$hosts* on $(TZ=GST-1GDT LC_TIME="de_DE.UTF-8" date "+%D %T")"
+title="NMAP Scan *$hosts* on $(TZ=GST-1GDT LC_ALL=de_DE.utf8 date "+%D %T")"
 p1="<pre>Scan ports: $ports<br><br>"
 p2="</pre>"
 body=$(sed ':a;N;$!ba;s/\n/<br>/g' outputfile.txt)
