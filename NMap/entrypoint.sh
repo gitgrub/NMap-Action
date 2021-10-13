@@ -6,22 +6,18 @@ ports=$(cat /ports.txt)
 # 1. port range
 #nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
 # 2. scripts
-#nmap -v -O --open --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt
+#nmap -v -O --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --open -iL /scan.txt --oN outputfile.txt
+nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --open -iL /scan.txt --oN outputfile.txt
 # --oN    output normal
 # -sV     Attempts to determine the version of the service running on port
 # --open  Only show open (or possibly open) ports
 # -iL     Scan targets from a file
 # -A
-
-echo ======================================================
-echo huhu > outputfile.txt
-cat exploitdb.csv
-echo ======================================================
-
+# -O os detection
 
 hosts=$(grep -v '^#' /scan.txt)
 hosts=$(echo $hosts | sed 's/ /, /g')
-title="NMAP Scan *$hosts* on $(TZ=GST-1GDT date "+%d.%m.%Y %H:%M:%S")"
+title="NMAP Scan *$hosts* on $(TZ=GST-1GDT date "+%d.%m.%Y - %H:%M:%S")"
 
 p1="<pre>Scan ports: $ports<br><br>"
 p2="</pre>"
