@@ -1,7 +1,6 @@
 #!/bin/sh
 issues_url="https://api.github.com/repos/gitgrub/NMap-Action/issues"
 ports=$(cat /ports.txt)
-ports=$(grep -v '^#' /ports.txt)
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt
 nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
@@ -14,7 +13,10 @@ echo =cat outputfile.txt =======================================================
 cat outputfile.txt
 echo =cat========================================================================
 
-hosts=$(sed ':a;N;$!ba;s/\n/, /g' /scan.txt)
+hosts=$(grep -v '^#' /scan.txt)
+hosts=$(sed ':a;N;$!ba;s/\n/, /g' $hosts)
+
+#hosts=$(sed ':a;N;$!ba;s/\n/, /g' /scan.txt)
 title="NMAP Scan *$hosts* on $(TZ=GST-1GDT date "+%d.%m.%Y %H:%M:%S")"
 
 p1="<pre>Scan ports: $ports<br><br>"
