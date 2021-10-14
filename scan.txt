@@ -1,5 +1,8 @@
-hilfe.tvbrowser.org
+#hilfe.tvbrowser.org
 #www.opel.de
-forum.videolan.org
+#forum.videolan.org
 #www.dropbox.com
-www.nextmarkets.com
+#www.nextmarkets.com
+www.hifi-forum.de
+www.billa.at
+forum.f-droid.org
