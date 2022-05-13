@@ -6,4 +6,7 @@
 #www.hifi-forum.de
 #www.billa.at
 #forum.f-droid.org
-178.79.148.229
+#mizzi
+#178.79.148.229
+#hm
+213.162.73.203
