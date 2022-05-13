@@ -3,6 +3,7 @@
 #forum.videolan.org
 #www.dropbox.com
 #www.nextmarkets.com
-www.hifi-forum.de
-www.billa.at
-forum.f-droid.org
+#www.hifi-forum.de
+#www.billa.at
+#forum.f-droid.org
+178.79.148.229
