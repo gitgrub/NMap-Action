@@ -18,6 +18,7 @@ nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --op
 # -A
 # -O os detection
 
+
 hosts=$(grep -v '^#' /scan.txt)
 hosts=$(echo $hosts | sed 's/ /, /g')
 title="NMAP Scan *$hosts* on $(TZ=GST-1GDT date "+%d.%m.%Y - %H:%M:%S")"
