@@ -3,13 +3,12 @@
 #forum.videolan.org
 #www.dropbox.com
 #www.nextmarkets.com
-
-www.hifi-forum.de
-www.billa.at
-
+#www.hifi-forum.de
+#www.billa.at
 #forum.f-droid.org
 #mizzi
 #84.115.231.162
-
 #hm
 #213.162.73.203
+heilig.at
+com1.undo.it
