@@ -25,6 +25,7 @@ nmap -v -Pn -p 62977-62988 -iL /scan.txt --oN outputfile.txt
 # -A
 # -O os detection
 
+
 if false; then
 echo ---------------------------------------------------------------------
 echo - outputfile.txt ----------------------------------------------------
