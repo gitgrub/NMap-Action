@@ -4,7 +4,7 @@ ports=$(cat /ports.txt)
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -sV --open -iL /scan.txt --oN outputfile.txt
 #nmap --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt
 # 1. port range
-nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
+#nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
 
 # 2. scripts
 #nmap -v -O --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --open -iL /scan.txt --oN outputfile.txt
@@ -15,6 +15,9 @@ nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
 # test for no response
 #nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --open -iL /scan.txt --oN outputfile.txt -Pn
 
+# test -np
+nmap -v -Pn -p 62888-62999 -iL /scan.txt --oN outputfile.txt
+
 # --oN    output normal
 # -sV     Attempts to determine the version of the service running on port
 # --open  Only show open (or possibly open) ports
@@ -22,13 +25,14 @@ nmap -v -O --open -p$ports -iL /scan.txt --oN outputfile.txt
 # -A
 # -O os detection
 
+if false; then
 echo ---------------------------------------------------------------------
 echo - outputfile.txt ----------------------------------------------------
 echo ---------------------------------------------------------------------
 cat outputfile.txt
 echo ---------------------------------------------------------------------
 echo ---------------------------------------------------------------------
-
+fi
 
 hosts=$(grep -v '^#' /scan.txt)
 hosts=$(echo $hosts | sed 's/ /, /g')
