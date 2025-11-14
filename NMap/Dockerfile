@@ -1,4 +1,6 @@
-FROM ubuntu:18.04
+# FROM ubuntu:18.04
+FROM ubuntu:24.04
+# FROM ubuntu:latest
 
 LABEL "com.github.actions.name"="NMap"
 LABEL "com.github.actions.description"="NMaps Host And Uploads Findings To Issue"
@@ -7,8 +9,8 @@ LABEL "com.github.actions.color"="Red"
 LABEL "maintainer"="gitgrub <gitgrub.email@gmail.com>"
 
 RUN echo ----------------------------------------------------- && \
-  ls -la / && \
-  echo -----------------------------------------------------
+    ls -la / && \
+    echo -----------------------------------------------------
 
 RUN apt-get update && apt-get install -y \
   curl \
