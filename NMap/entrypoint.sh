@@ -12,11 +12,11 @@ ports=$(cat /ports.txt)
 # normal
 #nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --open -iL /scan.txt --oN outputfile.txt
 
-# test for no response
+# test for no response - eh scho -Pn
 #nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv --open -iL /scan.txt --oN outputfile.txt -Pn
 
 # test -np
-nmap -v -Pn -p 62888-62999 -iL /scan.txt --oN outputfile.txt
+nmap -v -Pn -p 62977-62988 -iL /scan.txt --oN outputfile.txt
 
 # --oN    output normal
 # -sV     Attempts to determine the version of the service running on port
@@ -32,6 +32,8 @@ echo ---------------------------------------------------------------------
 cat outputfile.txt
 echo ---------------------------------------------------------------------
 echo ---------------------------------------------------------------------
+else
+echo XXXXX else XXXXX else XXXXX else XXXXX else XXXXX else XXXXX else XXXXX else 
 fi
 
 hosts=$(grep -v '^#' /scan.txt)
