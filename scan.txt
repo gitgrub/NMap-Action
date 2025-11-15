@@ -7,8 +7,7 @@
 #www.billa.at
 #forum.f-droid.org
 #mizzi
-#84.115.231.162
-#hm
-#213.162.73.203
-heilig.at
-com1.undo.it
+84.115.231.162
+
+#heilig.at
+#com1.undo.it
