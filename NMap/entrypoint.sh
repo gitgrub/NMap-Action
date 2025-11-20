@@ -16,6 +16,7 @@ ports=$(cat /ports.txt)
 #nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt -Pn
 #nmap -v --script vulscan/vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt -Pn
 nmap -v -sV -Pn --script vulners -iL /scan.txt --oN outputfile.txt
+echo cpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcp
 cp outputfile.txt /out.txt
 
 # test -np
