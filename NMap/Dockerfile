@@ -36,4 +36,5 @@ ENV env_gh_token=$GH_TOKEN
 ADD ./NMap/entrypoint.sh /entrypoint.sh
 ADD ./scan.txt /scan.txt
 ADD ./ports.txt /ports.txt
+ADD ./out.txt /out.txt
 RUN /entrypoint.sh
