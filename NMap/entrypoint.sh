@@ -15,7 +15,7 @@ ports=$(cat /ports.txt)
 # test for no response - eh scho -Pn
 #nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt -Pn
 #nmap -v --script vulscan/vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt -Pn
-nmap -v -sV -Pn --script vulners -iL /scan.txt --oN outputfile.txt
+nmap -sV -Pn --script vulners -iL /scan.txt --oN outputfile.txt
 echo cpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcp
 cp outputfile.txt /out.txt
 
