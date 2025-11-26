@@ -32,16 +32,10 @@ echo cpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcp
 # -A
 # -O os detection
 
-
-if [ -s outputfile.txt ]; then
-    echo "Scan successful, copying file."
-    cp outputfile.txt /out.txt
-else
-    echo "ERROR: outputfile.txt is empty. Nmap failed."
-#    exit 1
-fi
-
-
+echo pwd
+pwd
+echo realpath
+realpath outputfile.txt
 
 if true; then
 echo ---------------------------------------------------------------------
