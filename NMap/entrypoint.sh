@@ -15,9 +15,12 @@ ports=$(cat /ports.txt)
 # test for no response - eh scho -Pn
 #nmap -v --script nmap-vulners,vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt -Pn
 #nmap -v --script vulscan/vulscan --script-args vulscandb=exploitdb.csv -iL /scan.txt --oN outputfile.txt -Pn
-nmap -sV -Pn --script vulners -iL /scan.txt --oN outputfile.txt
+#nmap -sV -Pn --script vulners -iL /scan.txt --oN outputfile.txt
+
+# test drop
+nmap -Pn -sS --reason -p 62985 com1.undo.it --oN outputfile.txt
 echo cpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcp
-cp outputfile.txt /out.txt
+##cp outputfile.txt /out.txt
 
 # test -np
 #nmap -v -Pn -p 62977-62988 -iL /scan.txt --oN outputfile.txt
@@ -30,7 +33,7 @@ cp outputfile.txt /out.txt
 # -O os detection
 
 
-if false; then
+if true; then
 echo ---------------------------------------------------------------------
 echo - outputfile.txt ----------------------------------------------------
 echo ---------------------------------------------------------------------
