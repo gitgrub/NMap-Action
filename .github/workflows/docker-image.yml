@@ -24,8 +24,9 @@ jobs:
     - name: Build the Docker image
 #      run: docker build --build-arg TTEST=franzi --build-arg GH_TOKEN=${{ secrets.GITHUB_TOKEN }} . --file NMap/Dockerfile --tag my-image-name:$(date +%s)
       run: docker build --build-arg TTEST=franzi --build-arg GH_TOKEN=${{ secrets.GITHUB_TOKEN }} . --file NMap/Dockerfile --tag my-image-name:$(date +%s) --no-cache
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: nmap-results
-        path: /outputfile.txt
+
+#    - name: Upload Artifact
+#      uses: actions/upload-artifact@v4
+#      with:
+#        name: nmap-results
+#        path: /outputfile.txt
